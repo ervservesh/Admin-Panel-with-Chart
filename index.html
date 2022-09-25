@@ -13,28 +13,143 @@
 <body>
 
 <div class="container">
-    <div class="row g-0">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
-                    <canvas id="chLine"></canvas>
+    <p class="mob-bar">
+          <i class="fa-solid fa-tally-3" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"></i>
+    </p>
+    <div class="wrap-section">
+        <div class="navigation-section bg-white collapse" id="collapseExample">
+            <div class="logo-section">
+                <a href="#"><img src="images/logo.png" alt="Logo" /></a>
+                <h2 class="fw-bold">
+                    <p>Mouris</p>
+                    <p><span>Dashboard</span></p>
+                </h2>
+            </div>
+            <ul class="list-unstyled">
+              <li class="parent-li">
+                <a href="#"><i class="fa-solid fa-grid-2"></i>Dashboard</a>
+              </li>
+              <li class="parent-li">
+                <a href="#"><i class="fa-solid fa-chart-pie-simple"></i>Statistics</a>                
+              </li>
+              <li class="parent-li">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                   <i class="fa-solid fa-chart-line"></i> Overview
+                </button>
+                <div class="collapse" id="orders-collapse">
+                  <ul class="child-ul">
+                    <li><a href="#">Transaction</a></li>
+                    <li><a href="#">Schedule</a></li>
+                  </ul>
                 </div>
+              </li>
+              <li class="parent-li">
+                <a href="#"><i class="fa-solid fa-gear"></i> Settings</a>
+              </li>
+            </ul>
+            <div class="click-update text-center">
+                <a href="#"><img src="images/update.jpg" alt="Click to Update" /></a>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="card ms-2">
-                <div class="card-body">
-                    <canvas id="chBar"></canvas>
+        <div class="main-content">
+            <nav class="header-nav justify-content-between bg-white">
+                <div class="auto-search">
+                    <span class="fa-regular fa-magnifying-glass"></span>
+                    <input type="text" class="form-control auto-search-box" placeholder="Search something...">
                 </div>
-            </div>
+                <div class="profile-section text-end">
+                    <a href="#" class="bg-radius"><i class="fa-regular fa-comment-dots"></i></a>
+                    <a href="#" class="bg-radius"><i class="fa-regular fa-bell"><span class="notification-alert"></span></i></a>
+                    <span class="profile-img-wrap">
+                        <img class="profile-img" src="images/profile-img.png" alt="Profile Image">
+                        <i class="fa-regular fa-angle-down"></i>
+                    </span>
+                </div>
+            </nav>
+            <main class="content-section">
+                <div class="row g-0">
+                    <div class="col-sm-8">
+                        <div class="row g-0">
+                            <div class="col-sm-6 total-details">
+                                <div class="total-sec">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <h3>3.456K
+                                        <p>Total Views</p>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 total-details">
+                                <div class="total-sec">
+                                    <i class="fa-solid fa-cart-minus"></i>
+                                    <h3>3.456K
+                                        <p>Total Views</p>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 total-details">
+                                <div class="total-sec">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    <h3>3.456K
+                                        <p>Total Views</p>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 total-details">
+                                <div class="total-sec">
+                                    <i class="fa-solid fa-user-group"></i>
+                                    <h3>3.456K
+                                        <p>Total Views</p>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line-chart-section">
+                            <div class="line-chart-wrap">
+                                <div class="line-head d-flex justify-content-between">
+                                    <h4>Statistics</h4>
+                                    <h5>Month <i class="fa-regular fa-angle-down"></i></h5>
+                                </div>
+                                <div class="line-chart">
+                                    <canvas id="chLine"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                         <div class="bar-chart-wrap line-chart-wrap">
+                            <div class="line-head d-flex justify-content-between">
+                                <h4>Profit this day</h4>
+                                <h5><i class="fa-solid fa-ellipsis"></i></h5>
+                            </div>
+                            <div class="profit-amt">
+                                $13.209
+                            </div>
+                            <div class="line-chart">
+                                <canvas id="chBar"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+            </footer>
         </div>
     </div>
 </div>
 <!-- partial -->
-  <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js'></script>  
+<!-- <script src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script> -->
+<!-- <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script> -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js'></script>
+<script  src="js/bootstrap.bundle.min.js"></script> 
 <script  src="js/script.js"></script>
-
+<script type="text/javascript">
+(function () {
+  'use strict'
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+})()
+</script>
 </body>
 </html>

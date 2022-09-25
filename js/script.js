@@ -96,7 +96,7 @@ if (chBar) {
             }
         },
         gridLines: {
-          borderDash: [20, 12],
+          borderDash: [20, 12]
         }
       }],
       xAxes: [{
@@ -110,4 +110,6 @@ if (chBar) {
   }
   });
 }
+
+
 
