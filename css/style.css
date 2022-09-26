@@ -392,12 +392,12 @@ ul li {
   display: none;
 }
 
-.collapse:not(.show) {
+.navigation-section:not(.show) {
   display: block;
 }
 
 @media screen and (max-width: 767px) {
-  .collapse:not(.show) {
+  .navigation-section:not(.show) {
     display: none;
   }
 
